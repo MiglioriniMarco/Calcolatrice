@@ -7,7 +7,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class calcolatrice {
@@ -34,6 +37,7 @@ public class calcolatrice {
     private JButton chiudiParentesi;
     private JRadioButton RPNRadioButton;
     private JRadioButton infissaRadioButton;
+    private JButton cronologia;
 
     private StringBuilder currentEspressione = new StringBuilder();
 
@@ -254,6 +258,34 @@ public class calcolatrice {
             public void actionPerformed(ActionEvent e) {
                 if (infissaRadioButton.isSelected())
                     infissaRadioButton.setSelected(false);
+            }
+        });
+        cronologia.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Connection connection = DBConnection.getConnection();
+
+                List<String> operazioniList = new ArrayList<>();
+
+                try {
+                    String query = "SELECT operazione FROM operazioni WHERE Id_utente = ?";
+
+                    PreparedStatement preparedStatement = connection.prepareStatement(query);
+                    preparedStatement.setInt(1, DBConnection.getUserID());
+
+                    ResultSet resultSet = preparedStatement.executeQuery();
+
+                    while (resultSet.next()) {
+                        operazioniList.add(resultSet.getString("operazione"));
+                    }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+
+                // Converti la lista di operazioni in una stringa
+                String operazioni = String.join("\n", operazioniList);
+
+                JOptionPane.showMessageDialog(null, "Cronologia operazioni di " + DBConnection.getUser() + ":\n" + operazioni);
             }
         });
     }

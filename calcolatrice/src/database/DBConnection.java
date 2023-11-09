@@ -12,6 +12,8 @@ public class DBConnection {
 
     private static int userID = -1;
 
+    private static String user = "null";
+
     public static Connection getConnection() {
         if (connection == null) {
             try {
@@ -31,5 +33,13 @@ public class DBConnection {
 
     public static int getUserID() {
         return userID;
+    }
+
+    public static String getUser() {
+        return user;
+    }
+
+    public static void setUser(String user) {
+        DBConnection.user = user;
     }
 }

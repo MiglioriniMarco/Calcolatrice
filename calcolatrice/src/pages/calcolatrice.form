@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="pages.calcolatrice">
-  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="7" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="7" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="601" height="400"/>
     </constraints>
     <properties>
       <background color="-13881551"/>
@@ -13,7 +13,7 @@
     <children>
       <component id="1cb4c" class="javax.swing.JLabel" binding="display">
         <constraints>
-          <grid row="0" column="0" row-span="2" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="2" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-12828863"/>
@@ -122,7 +122,7 @@
       </component>
       <component id="8c562" class="javax.swing.JButton" binding="plus">
         <constraints>
-          <grid row="2" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-12828863"/>
@@ -133,7 +133,7 @@
       </component>
       <component id="ee72a" class="javax.swing.JButton" binding="minus">
         <constraints>
-          <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-12828863"/>
@@ -144,7 +144,7 @@
       </component>
       <component id="293ab" class="javax.swing.JButton" binding="X">
         <constraints>
-          <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-12828863"/>
@@ -155,7 +155,7 @@
       </component>
       <component id="ddea2" class="javax.swing.JButton" binding="uguale">
         <constraints>
-          <grid row="6" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-12828863"/>
@@ -166,7 +166,7 @@
       </component>
       <component id="f5fde" class="javax.swing.JButton" binding="diviso">
         <constraints>
-          <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-12828863"/>
@@ -219,27 +219,6 @@
           <text value="("/>
         </properties>
       </component>
-      <component id="6e9f1" class="javax.swing.JRadioButton" binding="RPNRadioButton" default-binding="true">
-        <constraints>
-          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-13947600"/>
-          <foreground color="-27"/>
-          <text value="RPN"/>
-        </properties>
-      </component>
-      <component id="bdf35" class="javax.swing.JRadioButton" binding="infissaRadioButton" default-binding="true">
-        <constraints>
-          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-13947600"/>
-          <foreground color="-27"/>
-          <selected value="true"/>
-          <text value="Infissa"/>
-        </properties>
-      </component>
       <component id="aec0f" class="javax.swing.JButton" binding="chiudiParentesi">
         <constraints>
           <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -250,6 +229,39 @@
           <font name="Arial Black" size="18" style="1"/>
           <foreground color="-27"/>
           <text value=")"/>
+        </properties>
+      </component>
+      <component id="62240" class="javax.swing.JButton" binding="cronologia">
+        <constraints>
+          <grid row="0" column="5" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12828863"/>
+          <font name="Arial Black" size="10" style="1"/>
+          <foreground color="-27"/>
+          <text value="Cronologia"/>
+        </properties>
+      </component>
+      <component id="6e9f1" class="javax.swing.JRadioButton" binding="RPNRadioButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13947600"/>
+          <font/>
+          <foreground color="-27"/>
+          <text value="RPN"/>
+        </properties>
+      </component>
+      <component id="bdf35" class="javax.swing.JRadioButton" binding="infissaRadioButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13947600"/>
+          <foreground color="-27"/>
+          <selected value="true"/>
+          <text value="Infissa"/>
         </properties>
       </component>
     </children>

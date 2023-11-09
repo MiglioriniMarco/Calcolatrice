@@ -34,7 +34,7 @@ public class Login {
                         a.printStackTrace();
                     }
 
-                    JFrame calcolatrice = new JFrame("Calcolatrice");
+                    JFrame calcolatrice = new JFrame("Calcolatrice - " + DBConnection.getUser());
                     calcolatrice.setContentPane(new calcolatrice().panel);
                     calcolatrice.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     calcolatrice.pack();
@@ -110,6 +110,7 @@ public class Login {
 
                 if (pwd.equals(Password)) {
                     DBConnection.setUserID(resultSet.getInt("ID"));
+                    DBConnection.setUser(resultSet.getString("user_name"));
                     return true;
                 }
             }
