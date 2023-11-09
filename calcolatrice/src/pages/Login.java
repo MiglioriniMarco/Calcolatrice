@@ -28,6 +28,12 @@ public class Login {
                 boolean registrato = verificaCredenziali(username.getText(), password.getText());
 
                 if (registrato) {
+                    try {
+                        UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+                    } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException a) {
+                        a.printStackTrace();
+                    }
+
                     JFrame calcolatrice = new JFrame("Calcolatrice");
                     calcolatrice.setContentPane(new calcolatrice().panel);
                     calcolatrice.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,9 +53,15 @@ public class Login {
         REGISTRATIButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                try {
+                    UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+                } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException a) {
+                    a.printStackTrace();
+                }
+
                 JFrame registrazioneFrame = new JFrame("Registrazione");
                 registrazioneFrame.setContentPane(new registration().registrazione);
-                registrazioneFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Chiudi solo la finestra di registrazione
+                registrazioneFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Chiudi solo la finestra di registrazione
                 registrazioneFrame.pack();
                 registrazioneFrame.setSize(350, 350);
                 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -64,6 +76,12 @@ public class Login {
     }
 
     public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+        } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException a) {
+            a.printStackTrace();
+        }
+
         JFrame frame = new JFrame("Login");
         frame.setContentPane(new Login().login);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
